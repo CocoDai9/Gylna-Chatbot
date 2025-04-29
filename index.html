@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLYNA Chatbot</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <style>
+    /* Static Gradient Background for the Chatbox */
+    body {
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f7; /* Keeping the page background simple */
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .chat-container {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 500px;
+      border-radius: 18px; /* Keep the outer container's corner radius */
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+    }
+
+    /* Static Gradient Background for Chatbox */
+    #container {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px;
+      background: linear-gradient(-45deg, #5c4db4, #7a71c4, #7aaeb4, #6a90b4);
+      background-size: 400% 400%;
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, #5c4db4, #7a71c4);
+      color: white;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .chat-header img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      margin-right: 15px;
+      border: 2px solid white;
+    }
+
+    .input-group {
+      padding: 15px;
+      background-color: #ffffff;
+    }
+
+    input:focus {
+      box-shadow: none !important;
+      outline: none !important;
+      border-color: #ced4da !important;
+    }
+
+    #sentBtn {
+      background: linear-gradient(135deg, #5c4db4, #7a71c4);
+      border: none;
+      color: white;
+      transition: background 0.3s ease;
+    }
+
+    #sentBtn:hover {
+      background: linear-gradient(135deg, #4a3fa0, #675bb2);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="chat-container">
+    <!-- Chatbot Header -->
+    <div class="chat-header">
+      <img src="https://www.cambridge.org/elt/blog/wp-content/uploads/2020/08/GettyImages-1221348467-e1597069527719.jpg" class="rounded-circle" alt="Chatbot Avatar">
+      <div>
+        <h5 class="mb-0">GLYNA Chatbot</h5>
+        <small>Online</small>
+      </div>
+    </div>
+
+    <!-- Chat Messages Container (with static gradient) -->
+    <div id="container">
+      <!-- Messages will appear here -->
+    </div>
+
+    <!-- Input Area -->
+    <div class="input-group">
+      <input id="textbox" type="text" class="form-control" placeholder="Type your message..." />
+      <button id="sentBtn" type="button" class="btn">Send</button>
+    </div>
+  </div>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+  <!-- Your Main Logic -->
+  <script src="js/main.js"></script>
+</body>
+</html>
